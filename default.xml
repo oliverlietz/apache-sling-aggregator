@@ -5,9 +5,17 @@
   <project name="apache-sling-aggregator" path="." remote="oliverlietz"/>
   <project name="sling-adapter-annotations" path="adapter-annotations" remote="origin"/>
   <project name="sling-apache-sling-jar-resource-bundle" path="apache-sling-jar-resource-bundle" remote="origin"/>
+  <project name="sling-archetype-parent" path="sling-archetype-parent" remote="origin"/>
+  <project name="sling-bundle-archetype" path="sling-bundle-archetype" remote="origin"/>
   <project name="sling-htl-maven-plugin" path="htl-maven-plugin" remote="origin"/>
+  <project name="sling-ide-tooling" path="sling-ide-tooling" remote="origin"/>
+  <project name="sling-initial-content-archetype" path="sling-initial-content-archetype" remote="origin"/>
+  <project name="sling-jcrinstall-bundle-archetype" path="sling-jcrinstall-bundle-archetype" remote="origin"/>
   <project name="sling-jspc-maven-plugin" path="jspc-maven-plugin" remote="origin"/>
   <project name="sling-launchpad-comparator" path="launchpad-comparator" remote="origin"/>
+  <project name="sling-launchpad-debian" path="sling-launchpad-debian" remote="origin"/>
+  <project name="sling-launchpad-standalone-archetype" path="sling-launchpad-standalone-archetype" remote="origin"/>
+  <project name="sling-launchpad-webapp-archetype" path="sling-launchpad-webapp-archetype" remote="origin"/>
   <project name="sling-maven-jcrocm-plugin" path="maven-jcrocm-plugin" remote="origin"/>
   <project name="sling-maven-launchpad-plugin" path="maven-launchpad-plugin" remote="origin"/>
   <project name="sling-maven-sling-plugin" path="maven-sling-plugin" remote="origin"/>
@@ -245,18 +253,10 @@
   <project name="sling-org-apache-sling-validation-test-services" path="org.apache.sling.validation.test-services" remote="origin"/>
   <project name="sling-org-apache-sling-xss" path="org.apache.sling.xss" remote="origin"/>
   <project name="sling-parent" path="sling" remote="origin"/>
-  <project name="sling-archetype-parent" path="sling-archetype-parent" remote="origin"/>
-  <project name="sling-bundle-archetype" path="sling-bundle-archetype" remote="origin"/>
-  <project name="sling-ide-tooling" path="sling-ide-tooling" remote="origin"/>
-  <project name="sling-initial-content-archetype" path="sling-initial-content-archetype" remote="origin"/>
-  <project name="sling-jcrinstall-bundle-archetype" path="sling-jcrinstall-bundle-archetype" remote="origin"/>
-  <project name="sling-launchpad-debian" path="sling-launchpad-debian" remote="origin"/>
-  <project name="sling-launchpad-standalone-archetype" path="sling-launchpad-standalone-archetype" remote="origin"/>
-  <project name="sling-launchpad-webapp-archetype" path="sling-launchpad-webapp-archetype" remote="origin"/>
   <project name="sling-samples" path="sling-samples-builder" remote="origin"/>
   <project name="sling-servlet-archetype" path="sling-servlet-archetype" remote="origin"/>
   <project name="sling-site" path="sling-site" remote="origin"/>
   <project name="sling-slingstart-archetype" path="sling-slingstart-archetype" remote="origin"/>
-  <project name="sling-taglib-archetype" path="sling-taglib-archetype" remote="origin"/>
   <project name="sling-slingstart-maven-plugin" path="slingstart-maven-plugin" remote="origin"/>
+  <project name="sling-taglib-archetype" path="sling-taglib-archetype" remote="origin"/>
 </manifest>
