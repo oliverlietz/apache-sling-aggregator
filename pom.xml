@@ -267,6 +267,5 @@
     <module>sling-site</module>
     <module>sling-slingstart-archetype</module>
     <module>sling-taglib-archetype</module>
-    <module>slingstart-maven-plugin</module>
   </modules>
 </project>
