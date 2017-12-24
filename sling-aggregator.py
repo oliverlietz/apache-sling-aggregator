@@ -5,24 +5,33 @@ import re
 import urllib.request
 import xml.etree.ElementTree
 
-blacklist = ['sling-aggregator', 'sling-tooling-jenkins', 'sling-tooling-release', 'sling-tooling-scm', 'sling-whiteboard']
+repo_blacklist = []
+
+maven_blacklist = ['slingstart-maven-plugin']
 
 
 def read_opml():
     response = urllib.request.urlopen('https://gitbox.apache.org/repos/asf?a=opml')
-    return response.read()
+    opml = response.read()
+    return xml.etree.ElementTree.fromstring(opml)
 
 
 def read_pom(repo):
     url = 'https://gitbox.apache.org/repos/asf?p=%s.git;a=blob_plain;f=pom.xml;hb=HEAD' % (repo)
     response = urllib.request.urlopen(url)
-    return response.read()
+    if response.getcode() == 200:
+        pom = response.read()
+        try:
+            return xml.etree.ElementTree.fromstring(pom)
+        except:
+            return None
+    else:
+        return None
 
 
 def filter_sling_repos(opml):
     repos = []
-    root = xml.etree.ElementTree.fromstring(opml)
-    result = root.findall(".//outline[@xmlUrl]")
+    result = opml.findall(".//outline[@xmlUrl]")
     pattern = re.compile('p=(.*)\.git')
     for element in result:
         xmlUrl = element.attrib['xmlUrl']
@@ -30,15 +39,14 @@ def filter_sling_repos(opml):
             urls = re.findall(pattern, xmlUrl)
             if len(urls) == 1:
                 url = urls[0]
-                if url not in blacklist:
+                if url not in repo_blacklist:
                     repos.append(url)
     repos.sort()
     return repos
 
 
 def read_artifact_id(pom):
-    root = xml.etree.ElementTree.fromstring(pom)
-    artifactId = root.findall('./{http://maven.apache.org/POM/4.0.0}artifactId')[0].text
+    artifactId = pom.findall('./{http://maven.apache.org/POM/4.0.0}artifactId')[0].text
     return artifactId.strip()
 
 
@@ -46,9 +54,10 @@ def map_artifact_ids(repos):
     mapping = {}
     for repo in repos:
         pom = read_pom(repo)
-        artifactId = read_artifact_id(pom)
-        if artifactId:
-            mapping[artifactId] = repo
+        if pom:
+            artifactId = read_artifact_id(pom)
+            if artifactId:
+                mapping[repo] = artifactId
     return mapping
 
 
@@ -61,10 +70,10 @@ def build_repo_manifest(mapping):
     project.set('name', 'apache-sling-aggregator')
     project.set('remote', 'oliverlietz')
     manifest.append(project)
-    for artifactId in sorted(mapping):
+    for repo in sorted(mapping):
         project = xml.etree.ElementTree.Element('project')
-        project.set('path', artifactId)
-        project.set('name', mapping[artifactId])
+        project.set('path', mapping[repo])
+        project.set('name', repo)
         project.set('remote', 'origin')
         manifest.append(project)
 
@@ -107,10 +116,12 @@ def build_maven_aggregator_pom(mapping):
 
     modules = xml.etree.ElementTree.Element('modules')
     pom.append(modules)
-    for artifactId in sorted(mapping):
-        module = xml.etree.ElementTree.Element('module')
-        module.text = artifactId
-        modules.append(module)
+    artifactIds = sorted(mapping.values())
+    for artifactId in artifactIds:
+        if artifactId and artifactId not in maven_blacklist:
+            module = xml.etree.ElementTree.Element('module')
+            module.text = artifactId
+            modules.append(module)
 
     return xml.etree.ElementTree.ElementTree(pom)
 
