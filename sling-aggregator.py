@@ -63,8 +63,8 @@ def map_artifact_ids(repos):
 
 def build_repo_manifest(mapping):
     manifest = xml.etree.ElementTree.Element('manifest')
-    manifest.append(build_remote('origin', 'https://gitbox.apache.org/repos/asf/', 'master'))
-    manifest.append(build_remote('oliverlietz', 'https://github.com/oliverlietz/', 'master'))
+    manifest.append(build_repo_remote('origin', 'https://gitbox.apache.org/repos/asf/', 'master'))
+    manifest.append(build_repo_remote('oliverlietz', 'https://github.com/oliverlietz/', 'master'))
     project = xml.etree.ElementTree.Element('project')
     project.set('path', '.')
     project.set('name', 'apache-sling-aggregator')
@@ -80,7 +80,7 @@ def build_repo_manifest(mapping):
     return xml.etree.ElementTree.ElementTree(manifest)
 
 
-def build_remote(name, fetch, revision):
+def build_repo_remote(name, fetch, revision):
     remote = xml.etree.ElementTree.Element('remote')
     remote.set('name', name)
     remote.set('fetch', fetch)
@@ -98,7 +98,7 @@ def build_maven_aggregator_pom(mapping):
     modelVersion.text = '4.0.0'
     pom.append(modelVersion)
 
-    parent = build_parent()
+    parent = build_pom_parent()
     pom.append(parent)
 
     artifactId = xml.etree.ElementTree.Element('artifactId')
@@ -123,10 +123,12 @@ def build_maven_aggregator_pom(mapping):
             module.text = artifactId
             modules.append(module)
 
+    build = build_pom_build()
+    pom.append(build)
     return xml.etree.ElementTree.ElementTree(pom)
 
 
-def build_parent():
+def build_pom_parent():
     parent = xml.etree.ElementTree.Element('parent')
     groupId = xml.etree.ElementTree.Element('groupId')
     groupId.text = 'org.apache.sling'
@@ -140,6 +142,33 @@ def build_parent():
     relativePath = xml.etree.ElementTree.Element('relativePath')
     parent.append(relativePath)
     return parent
+
+
+def build_pom_build():
+    build = xml.etree.ElementTree.Element('build')
+    plugins = xml.etree.ElementTree.Element('plugins')
+    build.append(plugins)
+    rat = build_pom_build_plugin_skip('org.apache.rat', 'apache-rat-plugin')
+    plugins.append(rat)
+    ianal = build_pom_build_plugin_skip('org.codehaus.mojo', 'ianal-maven-plugin')
+    plugins.append(ianal)
+    return build
+
+
+def build_pom_build_plugin_skip(group_id, artifact_id):
+    plugin = xml.etree.ElementTree.Element('plugin')
+    groupId = xml.etree.ElementTree.Element('groupId')
+    groupId.text = group_id
+    plugin.append(groupId)
+    artifactId = xml.etree.ElementTree.Element('artifactId')
+    artifactId.text = artifact_id
+    plugin.append(artifactId)
+    configuration = xml.etree.ElementTree.Element('configuration')
+    plugin.append(configuration)
+    skip = xml.etree.ElementTree.Element('skip')
+    skip.text = 'true'
+    configuration.append(skip)
+    return plugin
 
 
 def build():
