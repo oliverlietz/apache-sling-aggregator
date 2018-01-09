@@ -60,8 +60,8 @@
     <module>org.apache.sling.commons.threaddump</module>
     <module>org.apache.sling.commons.threads</module>
     <module>org.apache.sling.crankstart.launcher</module>
+    <module>org.apache.sling.crankstart.test.model</module>
     <module>org.apache.sling.crankstart.test.services</module>
-    <module>org.apache.sling.cransktart.test.model</module>
     <module>org.apache.sling.datasource</module>
     <module>org.apache.sling.discovery.api</module>
     <module>org.apache.sling.discovery.base</module>
