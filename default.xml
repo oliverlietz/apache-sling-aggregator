@@ -59,8 +59,8 @@
   <project name="sling-org-apache-sling-commons-threaddump" path="org.apache.sling.commons.threaddump" remote="origin"/>
   <project name="sling-org-apache-sling-commons-threads" path="org.apache.sling.commons.threads" remote="origin"/>
   <project name="sling-org-apache-sling-crankstart-launcher" path="org.apache.sling.crankstart.launcher" remote="origin"/>
+  <project name="sling-org-apache-sling-crankstart-test-model" path="org.apache.sling.crankstart.test.model" remote="origin"/>
   <project name="sling-org-apache-sling-crankstart-test-services" path="org.apache.sling.crankstart.test.services" remote="origin"/>
-  <project name="sling-org-apache-sling-cransktart-test-model" path="org.apache.sling.cransktart.test.model" remote="origin"/>
   <project name="sling-org-apache-sling-datasource" path="org.apache.sling.datasource" remote="origin"/>
   <project name="sling-org-apache-sling-discovery-api" path="org.apache.sling.discovery.api" remote="origin"/>
   <project name="sling-org-apache-sling-discovery-base" path="org.apache.sling.discovery.base" remote="origin"/>
