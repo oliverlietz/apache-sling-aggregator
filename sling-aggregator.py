@@ -55,9 +55,9 @@ def map_artifact_ids(repos):
     for repo in repos:
         pom = read_pom(repo)
         if pom:
-            artifactId = read_artifact_id(pom)
-            if artifactId:
-                mapping[repo] = artifactId
+            mapping[repo] = read_artifact_id(pom)
+        else:
+            mapping[repo] = None
     return mapping
 
 
@@ -71,8 +71,9 @@ def build_repo_manifest(mapping):
     project.set('remote', 'oliverlietz')
     manifest.append(project)
     for repo in sorted(mapping):
+        path = repo if mapping[repo] is None else mapping[repo]
         project = xml.etree.ElementTree.Element('project')
-        project.set('path', mapping[repo])
+        project.set('path', path)
         project.set('name', repo)
         project.set('remote', 'origin')
         manifest.append(project)
@@ -116,9 +117,9 @@ def build_maven_aggregator_pom(mapping):
 
     modules = xml.etree.ElementTree.Element('modules')
     pom.append(modules)
-    artifactIds = sorted(mapping.values())
+    artifactIds = sorted(filter(None, mapping.values()))
     for artifactId in artifactIds:
-        if artifactId and artifactId not in maven_blacklist:
+        if artifactId not in maven_blacklist:
             module = xml.etree.ElementTree.Element('module')
             module.text = artifactId
             modules.append(module)
