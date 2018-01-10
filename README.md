@@ -11,3 +11,8 @@ Setup [Google Repo](https://source.android.com/setup/using-repo) and clone Sling
     repo init --no-clone-bundle --config-name -u https://github.com/oliverlietz/apache-sling-aggregator.git -b repo
     repo sync --no-clone-bundle -j 16
     repo forall -c git checkout master
+
+
+## Building Repo manifest and Maven aggregator project
+
+Running [`sling-aggregator.py`](https://github.com/oliverlietz/apache-sling-aggregator/blob/tooling/sling-aggregator.py) builds a [`default.xml`](https://github.com/oliverlietz/apache-sling-aggregator/blob/repo/default.xml) for Repo and a [`pom.xml`](https://github.com/oliverlietz/apache-sling-aggregator/blob/master/pom.xml) for Maven by processing [ASF Git Repos OPML Export](https://gitbox.apache.org/repos/asf?a=opml).
