@@ -3,6 +3,7 @@
 
 import re
 import urllib.request
+import xml.dom.minidom
 import xml.etree.ElementTree
 
 repo_blacklist = []
@@ -78,7 +79,7 @@ def build_repo_manifest(mapping):
         project.set('remote', 'origin')
         manifest.append(project)
 
-    return xml.etree.ElementTree.ElementTree(manifest)
+    return manifest
 
 
 def build_repo_remote(name, fetch, revision):
@@ -126,7 +127,7 @@ def build_maven_aggregator_pom(mapping):
 
     build = build_pom_build()
     pom.append(build)
-    return xml.etree.ElementTree.ElementTree(pom)
+    return pom
 
 
 def build_pom_parent():
@@ -171,15 +172,22 @@ def build_pom_build_plugin_skip(group_id, artifact_id):
     configuration.append(skip)
     return plugin
 
+def write_file(element, filename):
+    string = xml.etree.ElementTree.tostring(element, 'UTF-8')
+    document = xml.dom.minidom.parseString(string)
+    with open(filename, 'w') as file:
+        document.writexml(file, indent='', addindent='  ', newl='\n', encoding='UTF-8')
+    document.unlink()
+
 
 def build():
     opml = read_opml()
     repos = filter_sling_repos(opml)
     mapping = map_artifact_ids(repos)
     manifest = build_repo_manifest(mapping)
-    manifest.write('default.xml', encoding='utf-8')
+    write_file(manifest, 'default.xml')
     pom = build_maven_aggregator_pom(mapping)
-    pom.write('pom.xml', encoding='utf-8')
+    write_file(pom, 'pom.xml')
 
 
 if __name__ == '__main__':
