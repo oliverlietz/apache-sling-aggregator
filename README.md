@@ -6,7 +6,7 @@ Install [Google Repo](https://source.android.com/setup/using-repo) on Mac OS wit
 
 	brew install repo
 
-Setup [Google Repo](https://source.android.com/setup/using-repo) and clone Sling's modules from [GitBox](https://gitbox.apache.org/repos/asf):
+Set up [Google Repo](https://source.android.com/setup/using-repo) and clone Sling's modules from [GitBox](https://gitbox.apache.org/repos/asf):
 
     repo init --no-clone-bundle --config-name -u https://github.com/oliverlietz/apache-sling-aggregator.git -b repo
     repo sync --no-clone-bundle -j 16
