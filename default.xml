@@ -4,6 +4,7 @@
   <remote fetch="https://github.com/oliverlietz/" name="oliverlietz" revision="master"/>
   <project name="apache-sling-aggregator" path="." remote="oliverlietz"/>
   <project name="sling-adapter-annotations" path="adapter-annotations" remote="origin"/>
+  <project name="sling-aggregator" path="sling-aggregator" remote="origin"/>
   <project name="sling-apache-sling-jar-resource-bundle" path="apache-sling-jar-resource-bundle" remote="origin"/>
   <project name="sling-archetype-parent" path="sling-archetype-parent" remote="origin"/>
   <project name="sling-bundle-archetype" path="sling-bundle-archetype" remote="origin"/>
@@ -259,4 +260,8 @@
   <project name="sling-slingstart-archetype" path="sling-slingstart-archetype" remote="origin"/>
   <project name="sling-slingstart-maven-plugin" path="slingstart-maven-plugin" remote="origin"/>
   <project name="sling-taglib-archetype" path="sling-taglib-archetype" remote="origin"/>
+  <project name="sling-tooling-jenkins" path="sling-tooling-jenkins" remote="origin"/>
+  <project name="sling-tooling-release" path="sling-tooling-release" remote="origin"/>
+  <project name="sling-tooling-scm" path="sling-tooling-scm" remote="origin"/>
+  <project name="sling-whiteboard" path="sling-whiteboard" remote="origin"/>
 </manifest>
