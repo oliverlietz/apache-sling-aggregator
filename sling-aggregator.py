@@ -46,17 +46,23 @@ def filter_sling_repos(opml):
     return repos
 
 
-def read_artifact_id(pom):
-    artifactId = pom.findall('./{http://maven.apache.org/POM/4.0.0}artifactId')[0].text
-    return artifactId.strip()
+def read_project(pom):
+    project = {}
+    project['artifactId'] = pom.findall('./{http://maven.apache.org/POM/4.0.0}artifactId')[0].text.strip()
+    project['name'] = pom.findall('./{http://maven.apache.org/POM/4.0.0}name')[0].text.strip()
+    try:
+        project['description'] = pom.findall('./{http://maven.apache.org/POM/4.0.0}description')[0].text.strip()
+    except:
+        project['description'] = None
+    return project
 
 
-def map_artifact_ids(repos):
+def map_projects(repos):
     mapping = {}
     for repo in repos:
         pom = read_pom(repo)
         if pom:
-            mapping[repo] = read_artifact_id(pom)
+            mapping[repo] = read_project(pom)
         else:
             mapping[repo] = None
     return mapping
@@ -72,7 +78,7 @@ def build_repo_manifest(mapping):
     project.set('remote', 'oliverlietz')
     manifest.append(project)
     for repo in sorted(mapping):
-        path = repo if mapping[repo] is None else mapping[repo]
+        path = repo if mapping[repo] is None else mapping[repo]['artifactId']
         project = xml.etree.ElementTree.Element('project')
         project.set('path', path)
         project.set('name', repo)
@@ -118,9 +124,10 @@ def build_maven_aggregator_pom(mapping):
 
     modules = xml.etree.ElementTree.Element('modules')
     pom.append(modules)
-    artifactIds = sorted(filter(None, mapping.values()))
-    for artifactId in artifactIds:
-        if artifactId not in maven_blacklist:
+    projects = sorted(filter(None, mapping.values()), key=lambda project: project['artifactId'])
+    for project in projects:
+        artifactId = project['artifactId']
+        if artifactId and artifactId not in maven_blacklist:
             module = xml.etree.ElementTree.Element('module')
             module.text = artifactId
             modules.append(module)
@@ -172,22 +179,51 @@ def build_pom_build_plugin_skip(group_id, artifact_id):
     configuration.append(skip)
     return plugin
 
-def write_file(element, filename):
-    string = xml.etree.ElementTree.tostring(element, 'UTF-8')
-    document = xml.dom.minidom.parseString(string)
-    with open(filename, 'w') as file:
-        document.writexml(file, indent='', addindent='  ', newl='\n', encoding='UTF-8')
+
+def build_index_markdown(mapping):
+    markdown = []
+    markdown.append('# Apache Sling – Aggregator')
+    markdown.append('|||||')
+    markdown.append('--- | --- | --- | ---')
+    for repo in sorted(mapping):
+        if mapping[repo] is None:
+            row = '[{repo}](https://github.com/apache/{repo})|||'.format(repo=repo)
+        else:
+            project = mapping[repo]
+            artifactId = project['artifactId']
+            name = project['name']
+            if project['description']:
+                description = project['description'].replace('\n', ' ')
+            else:
+                description = ''
+            row = '[{repo}](https://github.com/apache/{repo})|`{artifactId}`|{name}|{description}'.format(repo=repo, artifactId=artifactId, name=name, description=description)
+        markdown.append(row)
+    return '\n'.join(markdown)
+
+
+def write_text_file(text, filename):
+    with open(filename, 'w') as f:
+        f.write(text)
+
+
+def write_xml_file(element, filename):
+    s = xml.etree.ElementTree.tostring(element, 'UTF-8')
+    document = xml.dom.minidom.parseString(s)
+    with open(filename, 'w') as f:
+        document.writexml(f, indent='', addindent='  ', newl='\n', encoding='UTF-8')
     document.unlink()
 
 
 def build():
     opml = read_opml()
     repos = filter_sling_repos(opml)
-    mapping = map_artifact_ids(repos)
+    mapping = map_projects(repos)
     manifest = build_repo_manifest(mapping)
-    write_file(manifest, 'default.xml')
+    write_xml_file(manifest, 'default.xml')
     pom = build_maven_aggregator_pom(mapping)
-    write_file(pom, 'pom.xml')
+    write_xml_file(pom, 'pom.xml')
+    index = build_index_markdown(mapping)
+    write_text_file(index, 'index.md')
 
 
 if __name__ == '__main__':
