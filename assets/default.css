@@ -1,0 +1,49 @@
+a {
+  color: #529ccc;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #529ccc;
+}
+
+a:active,
+a:hover {
+  color: #529ccc;
+}
+
+body {
+  color: #333333;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  height: 100%;
+  line-height: 1.2rem;
+}
+
+html {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+main {
+  background-color: #ffffff;
+  flex: 1 0 auto;
+  padding: 1rem;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  border: .01rem solid #eeeeee;
+  font-size: .8rem;
+  padding: 0.4rem;
+  vertical-align: top;
+}
+
+td:nth-child(-n+3) {
+  white-space: nowrap
+}
