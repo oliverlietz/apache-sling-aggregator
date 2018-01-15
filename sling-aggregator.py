@@ -183,6 +183,7 @@ def build_pom_build_plugin_skip(group_id, artifact_id):
 def build_index_markdown(mapping):
     markdown = []
     markdown.append('# Apache Sling – Aggregator')
+    markdown.append()
     markdown.append('|||||')
     markdown.append('--- | --- | --- | ---')
     for repo in sorted(mapping):
