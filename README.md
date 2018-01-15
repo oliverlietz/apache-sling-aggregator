@@ -13,6 +13,6 @@ Set up [Google Repo](https://source.android.com/setup/using-repo) and clone Slin
     repo forall -c git checkout master
 
 
-## Building Repo manifest and Maven aggregator project
+## Building Repo manifest, Maven aggregator project and index for GitHub
 
-Running [`sling-aggregator.py`](https://github.com/oliverlietz/apache-sling-aggregator/blob/tooling/sling-aggregator.py) builds a [`default.xml`](https://github.com/oliverlietz/apache-sling-aggregator/blob/repo/default.xml) for Repo and a [`pom.xml`](https://github.com/oliverlietz/apache-sling-aggregator/blob/master/pom.xml) for Maven by processing [ASF Git Repos OPML Export](https://gitbox.apache.org/repos/asf?a=opml).
+Running [`sling-aggregator.py`](https://github.com/oliverlietz/apache-sling-aggregator/blob/tooling/sling-aggregator.py) builds a [`default.xml`](https://github.com/oliverlietz/apache-sling-aggregator/blob/repo/default.xml) for Repo, a [`pom.xml`](https://github.com/oliverlietz/apache-sling-aggregator/blob/master/pom.xml) for Maven and an [`index.md`](https://github.com/oliverlietz/apache-sling-aggregator/blob/gh-pages/index.md) for GitHub by processing [ASF Git Repos OPML Export](https://gitbox.apache.org/repos/asf?a=opml).
