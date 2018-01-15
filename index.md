@@ -1,4 +1,5 @@
 # Apache Sling – Aggregator
+
 |||||
 --- | --- | --- | ---
 [sling-adapter-annotations](https://github.com/apache/sling-adapter-annotations)|`adapter-annotations`|Apache Sling Adapter Annotations|Annotations used to generate Sling Adapter metadata
