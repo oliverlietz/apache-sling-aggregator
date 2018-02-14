@@ -8,7 +8,7 @@ import xml.etree.ElementTree
 
 repo_blacklist = []
 
-maven_blacklist = ['slingstart-maven-plugin']
+maven_blacklist = ['slingstart-maven-plugin', 'org.apache.sling.launchpad.contrib-testing']
 
 
 def read_opml():
