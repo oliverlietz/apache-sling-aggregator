@@ -19,7 +19,10 @@ def read_opml():
 
 def read_pom(repo):
     url = 'https://gitbox.apache.org/repos/asf?p=%s.git;a=blob_plain;f=pom.xml;hb=HEAD' % (repo)
-    response = urllib.request.urlopen(url)
+    try:
+        response = urllib.request.urlopen(url)
+    except:
+        return None
     if response.getcode() == 200:
         pom = response.read()
         try:
@@ -183,7 +186,7 @@ def build_pom_build_plugin_skip(group_id, artifact_id):
 def build_index_markdown(mapping):
     markdown = []
     markdown.append('# Apache Sling – Aggregator')
-    markdown.append()
+    markdown.append('')
     markdown.append('|||||')
     markdown.append('--- | --- | --- | ---')
     for repo in sorted(mapping):
