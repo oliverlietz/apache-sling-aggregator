@@ -155,7 +155,6 @@
   <project name="sling-org-apache-sling-karaf-launchpad-oak-tar-integration-tests" path="org.apache.sling.karaf-launchpad-oak-tar-integration-tests" remote="origin"/>
   <project name="sling-org-apache-sling-launchpad-api" path="org.apache.sling.launchpad.api" remote="origin"/>
   <project name="sling-org-apache-sling-launchpad-base" path="org.apache.sling.launchpad.base" remote="origin"/>
-  <project name="sling-org-apache-sling-launchpad-content" path="org.apache.sling.launchpad.content" remote="origin"/>
   <project name="sling-org-apache-sling-launchpad-contrib-testing" path="org.apache.sling.launchpad.contrib-testing" remote="origin"/>
   <project name="sling-org-apache-sling-launchpad-installer" path="org.apache.sling.launchpad.installer" remote="origin"/>
   <project name="sling-org-apache-sling-launchpad-integration-tests" path="org.apache.sling.launchpad.integration-tests" remote="origin"/>
@@ -183,6 +182,7 @@
   <project name="sling-org-apache-sling-pipes" path="org.apache.sling.pipes" remote="origin"/>
   <project name="sling-org-apache-sling-provisioning-model" path="org.apache.sling.provisioning.model" remote="origin"/>
   <project name="sling-org-apache-sling-query" path="org.apache.sling.query" remote="origin"/>
+  <project name="sling-org-apache-sling-repoinit-it" path="org.apache.sling.repoinit.it" remote="origin"/>
   <project name="sling-org-apache-sling-repoinit-parser" path="org.apache.sling.repoinit.parser" remote="origin"/>
   <project name="sling-org-apache-sling-reqanalyzer" path="org.apache.sling.reqanalyzer" remote="origin"/>
   <project name="sling-org-apache-sling-resource-editor" path="org.apache.sling.resource-editor" remote="origin"/>
@@ -218,6 +218,7 @@
   <project name="sling-org-apache-sling-scripting-thymeleaf" path="org.apache.sling.scripting.thymeleaf" remote="origin"/>
   <project name="sling-org-apache-sling-scripting-xproc" path="org.apache.sling.scripting.xproc" remote="origin"/>
   <project name="sling-org-apache-sling-security" path="org.apache.sling.security" remote="origin"/>
+  <project name="sling-org-apache-sling-serviceuser-webconsole" path="org.apache.sling.serviceuser.webconsole" remote="origin"/>
   <project name="sling-org-apache-sling-serviceusermapper" path="org.apache.sling.serviceusermapper" remote="origin"/>
   <project name="sling-org-apache-sling-servlet-helpers" path="org.apache.sling.servlet-helpers" remote="origin"/>
   <project name="sling-org-apache-sling-servlets-get" path="org.apache.sling.servlets.get" remote="origin"/>
@@ -225,6 +226,8 @@
   <project name="sling-org-apache-sling-servlets-resolver" path="org.apache.sling.servlets.resolver" remote="origin"/>
   <project name="sling-org-apache-sling-settings" path="org.apache.sling.settings" remote="origin"/>
   <project name="sling-org-apache-sling-starter" path="org.apache.sling.starter" remote="origin"/>
+  <project name="sling-org-apache-sling-starter-content" path="org.apache.sling.starter.content" remote="origin"/>
+  <project name="sling-org-apache-sling-starter-docker" path="sling-org-apache-sling-starter-docker" remote="origin"/>
   <project name="sling-org-apache-sling-starter-startup" path="org.apache.sling.starter.startup" remote="origin"/>
   <project name="sling-org-apache-sling-startupfilter" path="org.apache.sling.startupfilter" remote="origin"/>
   <project name="sling-org-apache-sling-startupfilter-disabler" path="org.apache.sling.startupfilter.disabler" remote="origin"/>
