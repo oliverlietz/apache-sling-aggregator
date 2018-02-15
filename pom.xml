@@ -155,8 +155,6 @@
     <module>org.apache.sling.karaf-launchpad-oak-tar-integration-tests</module>
     <module>org.apache.sling.launchpad.api</module>
     <module>org.apache.sling.launchpad.base</module>
-    <module>org.apache.sling.launchpad.content</module>
-    <module>org.apache.sling.launchpad.contrib-testing</module>
     <module>org.apache.sling.launchpad.installer</module>
     <module>org.apache.sling.launchpad.integration-tests</module>
     <module>org.apache.sling.launchpad.test-bundles</module>
@@ -183,6 +181,7 @@
     <module>org.apache.sling.pipes</module>
     <module>org.apache.sling.provisioning.model</module>
     <module>org.apache.sling.query</module>
+    <module>org.apache.sling.repoinit.it</module>
     <module>org.apache.sling.repoinit.parser</module>
     <module>org.apache.sling.reqanalyzer</module>
     <module>org.apache.sling.resource-editor</module>
@@ -218,6 +217,7 @@
     <module>org.apache.sling.scripting.thymeleaf</module>
     <module>org.apache.sling.scripting.xproc</module>
     <module>org.apache.sling.security</module>
+    <module>org.apache.sling.serviceuser.webconsole</module>
     <module>org.apache.sling.serviceusermapper</module>
     <module>org.apache.sling.servlet-helpers</module>
     <module>org.apache.sling.servlets.get</module>
@@ -225,6 +225,7 @@
     <module>org.apache.sling.servlets.resolver</module>
     <module>org.apache.sling.settings</module>
     <module>org.apache.sling.starter</module>
+    <module>org.apache.sling.starter.content</module>
     <module>org.apache.sling.starter.startup</module>
     <module>org.apache.sling.startupfilter</module>
     <module>org.apache.sling.startupfilter.disabler</module>
