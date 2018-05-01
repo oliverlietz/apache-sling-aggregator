@@ -86,6 +86,14 @@
   <project name="sling-org-apache-sling-extensions-slf4j-mdc" path="org.apache.sling.extensions.slf4j.mdc" remote="origin"/>
   <project name="sling-org-apache-sling-extensions-webconsolebranding" path="org.apache.sling.extensions.webconsolebranding" remote="origin"/>
   <project name="sling-org-apache-sling-extensions-webconsolesecurityprovider" path="org.apache.sling.extensions.webconsolesecurityprovider" remote="origin"/>
+  <project name="sling-org-apache-sling-feature" path="org.apache.sling.feature" remote="origin"/>
+  <project name="sling-org-apache-sling-feature-analyser" path="org.apache.sling.feature.analyser" remote="origin"/>
+  <project name="sling-org-apache-sling-feature-applicationbuilder" path="org.apache.sling.feature.applicationbuilder" remote="origin"/>
+  <project name="sling-org-apache-sling-feature-io" path="org.apache.sling.feature.io" remote="origin"/>
+  <project name="sling-org-apache-sling-feature-karaf" path="org.apache.sling.feature.karaf" remote="origin"/>
+  <project name="sling-org-apache-sling-feature-launcher" path="org.apache.sling.feature.launcher" remote="origin"/>
+  <project name="sling-org-apache-sling-feature-modelconverter" path="org.apache.sling.feature.modelconverter" remote="origin"/>
+  <project name="sling-org-apache-sling-feature-resolver" path="org.apache.sling.feature.resolver" remote="origin"/>
   <project name="sling-org-apache-sling-featureflags" path="org.apache.sling.featureflags" remote="origin"/>
   <project name="sling-org-apache-sling-fragment-activation" path="org.apache.sling.fragment.activation" remote="origin"/>
   <project name="sling-org-apache-sling-fragment-nashorn" path="org.apache.sling.fragment.nashorn" remote="origin"/>
@@ -199,6 +207,7 @@
   <project name="sling-org-apache-sling-scripting-console" path="org.apache.sling.scripting.console" remote="origin"/>
   <project name="sling-org-apache-sling-scripting-core" path="org.apache.sling.scripting.core" remote="origin"/>
   <project name="sling-org-apache-sling-scripting-el-api" path="org.apache.sling.scripting.el-api" remote="origin"/>
+  <project name="sling-org-apache-sling-scripting-esx" path="org.apache.sling.scripting.esx" remote="origin"/>
   <project name="sling-org-apache-sling-scripting-freemarker" path="org.apache.sling.scripting.freemarker" remote="origin"/>
   <project name="sling-org-apache-sling-scripting-groovy" path="org.apache.sling.scripting.groovy" remote="origin"/>
   <project name="sling-org-apache-sling-scripting-java" path="org.apache.sling.scripting.java" remote="origin"/>
@@ -260,6 +269,7 @@
   <project name="sling-samples" path="sling-samples-builder" remote="origin"/>
   <project name="sling-servlet-archetype" path="sling-servlet-archetype" remote="origin"/>
   <project name="sling-site" path="sling-site" remote="origin"/>
+  <project name="sling-slingfeature-maven-plugin" path="osgifeature-maven-plugin" remote="origin"/>
   <project name="sling-slingstart-archetype" path="sling-slingstart-archetype" remote="origin"/>
   <project name="sling-slingstart-maven-plugin" path="slingstart-maven-plugin" remote="origin"/>
   <project name="sling-taglib-archetype" path="sling-taglib-archetype" remote="origin"/>
