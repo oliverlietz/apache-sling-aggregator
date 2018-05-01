@@ -4,7 +4,7 @@
   <parent>
     <groupId>org.apache.sling</groupId>
     <artifactId>sling</artifactId>
-    <version>32</version>
+    <version>33</version>
     <relativePath/>
   </parent>
   <artifactId>apache-sling-aggregator</artifactId>
@@ -86,6 +86,14 @@
     <module>org.apache.sling.extensions.slf4j.mdc</module>
     <module>org.apache.sling.extensions.webconsolebranding</module>
     <module>org.apache.sling.extensions.webconsolesecurityprovider</module>
+    <module>org.apache.sling.feature</module>
+    <module>org.apache.sling.feature.analyser</module>
+    <module>org.apache.sling.feature.applicationbuilder</module>
+    <module>org.apache.sling.feature.io</module>
+    <module>org.apache.sling.feature.karaf</module>
+    <module>org.apache.sling.feature.launcher</module>
+    <module>org.apache.sling.feature.modelconverter</module>
+    <module>org.apache.sling.feature.resolver</module>
     <module>org.apache.sling.featureflags</module>
     <module>org.apache.sling.fragment.activation</module>
     <module>org.apache.sling.fragment.nashorn</module>
@@ -198,6 +206,7 @@
     <module>org.apache.sling.scripting.console</module>
     <module>org.apache.sling.scripting.core</module>
     <module>org.apache.sling.scripting.el-api</module>
+    <module>org.apache.sling.scripting.esx</module>
     <module>org.apache.sling.scripting.freemarker</module>
     <module>org.apache.sling.scripting.groovy</module>
     <module>org.apache.sling.scripting.java</module>
@@ -254,10 +263,10 @@
     <module>org.apache.sling.validation.examples</module>
     <module>org.apache.sling.validation.test-services</module>
     <module>org.apache.sling.xss</module>
+    <module>osgifeature-maven-plugin</module>
     <module>sling</module>
     <module>sling-archetype-parent</module>
     <module>sling-bundle-archetype</module>
-    <module>sling-ide-tooling</module>
     <module>sling-initial-content-archetype</module>
     <module>sling-jcrinstall-bundle-archetype</module>
     <module>sling-launchpad-debian</module>
