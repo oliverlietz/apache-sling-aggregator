@@ -34,12 +34,14 @@
   <project name="sling-org-apache-sling-caconfig-impl" path="org.apache.sling.caconfig.impl" remote="origin"/>
   <project name="sling-org-apache-sling-caconfig-integration-tests" path="org.apache.sling.caconfig.integration-tests" remote="origin"/>
   <project name="sling-org-apache-sling-caconfig-spi" path="org.apache.sling.caconfig.spi" remote="origin"/>
+  <project name="sling-org-apache-sling-capabilities" path="org.apache.sling.capabilities" remote="origin"/>
   <project name="sling-org-apache-sling-cassandra" path="org.apache.sling.cassandra" remote="origin"/>
   <project name="sling-org-apache-sling-commons-cache-api" path="org.apache.sling.commons.cache.api" remote="origin"/>
   <project name="sling-org-apache-sling-commons-cache-container-test" path="org.apache.sling.commons.cache.container-test" remote="origin"/>
   <project name="sling-org-apache-sling-commons-cache-ehcache" path="org.apache.sling.commons.cache.ehcache" remote="origin"/>
   <project name="sling-org-apache-sling-commons-cache-impl" path="org.apache.sling.commons.cache.impl" remote="origin"/>
   <project name="sling-org-apache-sling-commons-cache-portal" path="org.apache.sling.commons.cache.portal" remote="origin"/>
+  <project name="sling-org-apache-sling-commons-clam" path="org.apache.sling.commons.clam" remote="origin"/>
   <project name="sling-org-apache-sling-commons-classloader" path="org.apache.sling.commons.classloader" remote="origin"/>
   <project name="sling-org-apache-sling-commons-compiler" path="org.apache.sling.commons.compiler" remote="origin"/>
   <project name="sling-org-apache-sling-commons-contentdetection" path="org.apache.sling.commons.contentdetection" remote="origin"/>
@@ -230,6 +232,8 @@
   <project name="sling-org-apache-sling-serviceuser-webconsole" path="org.apache.sling.serviceuser.webconsole" remote="origin"/>
   <project name="sling-org-apache-sling-serviceusermapper" path="org.apache.sling.serviceusermapper" remote="origin"/>
   <project name="sling-org-apache-sling-servlet-helpers" path="org.apache.sling.servlet-helpers" remote="origin"/>
+  <project name="sling-org-apache-sling-servlets-annotations" path="org.apache.sling.servlets.annotations" remote="origin"/>
+  <project name="sling-org-apache-sling-servlets-annotations-it" path="org.apache.sling.servlets.annotations.it" remote="origin"/>
   <project name="sling-org-apache-sling-servlets-get" path="org.apache.sling.servlets.get" remote="origin"/>
   <project name="sling-org-apache-sling-servlets-post" path="org.apache.sling.servlets.post" remote="origin"/>
   <project name="sling-org-apache-sling-servlets-resolver" path="org.apache.sling.servlets.resolver" remote="origin"/>
