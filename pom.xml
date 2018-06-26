@@ -34,12 +34,14 @@
     <module>org.apache.sling.caconfig.impl</module>
     <module>org.apache.sling.caconfig.integration-tests</module>
     <module>org.apache.sling.caconfig.spi</module>
+    <module>org.apache.sling.capabilities</module>
     <module>org.apache.sling.cassandra</module>
     <module>org.apache.sling.commons.cache.api</module>
     <module>org.apache.sling.commons.cache.container-test</module>
     <module>org.apache.sling.commons.cache.ehcache</module>
     <module>org.apache.sling.commons.cache.impl</module>
     <module>org.apache.sling.commons.cache.portal</module>
+    <module>org.apache.sling.commons.clam</module>
     <module>org.apache.sling.commons.classloader</module>
     <module>org.apache.sling.commons.compiler</module>
     <module>org.apache.sling.commons.contentdetection</module>
@@ -229,6 +231,8 @@
     <module>org.apache.sling.serviceuser.webconsole</module>
     <module>org.apache.sling.serviceusermapper</module>
     <module>org.apache.sling.servlet-helpers</module>
+    <module>org.apache.sling.servlets.annotations</module>
+    <module>org.apache.sling.servlets.annotations.it</module>
     <module>org.apache.sling.servlets.get</module>
     <module>org.apache.sling.servlets.post</module>
     <module>org.apache.sling.servlets.resolver</module>
