@@ -22,6 +22,7 @@
   <project name="sling-maven-sling-plugin" path="maven-sling-plugin" remote="origin"/>
   <project name="sling-org-apache-sling-adapter" path="org.apache.sling.adapter" remote="origin"/>
   <project name="sling-org-apache-sling-api" path="org.apache.sling.api" remote="origin"/>
+  <project name="sling-org-apache-sling-app-cms" path="org.apache.sling.cms" remote="origin"/>
   <project name="sling-org-apache-sling-auth-core" path="org.apache.sling.auth.core" remote="origin"/>
   <project name="sling-org-apache-sling-auth-form" path="org.apache.sling.auth.form" remote="origin"/>
   <project name="sling-org-apache-sling-auth-xing-api" path="org.apache.sling.auth.xing.api" remote="origin"/>
@@ -36,6 +37,7 @@
   <project name="sling-org-apache-sling-caconfig-spi" path="org.apache.sling.caconfig.spi" remote="origin"/>
   <project name="sling-org-apache-sling-capabilities" path="org.apache.sling.capabilities" remote="origin"/>
   <project name="sling-org-apache-sling-cassandra" path="org.apache.sling.cassandra" remote="origin"/>
+  <project name="sling-org-apache-sling-clam" path="org.apache.sling.clam" remote="origin"/>
   <project name="sling-org-apache-sling-commons-cache-api" path="org.apache.sling.commons.cache.api" remote="origin"/>
   <project name="sling-org-apache-sling-commons-cache-container-test" path="org.apache.sling.commons.cache.container-test" remote="origin"/>
   <project name="sling-org-apache-sling-commons-cache-ehcache" path="org.apache.sling.commons.cache.ehcache" remote="origin"/>
@@ -47,6 +49,7 @@
   <project name="sling-org-apache-sling-commons-contentdetection" path="org.apache.sling.commons.contentdetection" remote="origin"/>
   <project name="sling-org-apache-sling-commons-fsclassloader" path="org.apache.sling.commons.fsclassloader" remote="origin"/>
   <project name="sling-org-apache-sling-commons-html" path="org.apache.sling.commons.html" remote="origin"/>
+  <project name="sling-org-apache-sling-commons-jcr-file" path="org.apache.sling.commons.jcr.file" remote="origin"/>
   <project name="sling-org-apache-sling-commons-johnzon" path="org.apache.sling.commons.johnzon" remote="origin"/>
   <project name="sling-org-apache-sling-commons-log" path="org.apache.sling.commons.log" remote="origin"/>
   <project name="sling-org-apache-sling-commons-log-webconsole" path="org.apache.sling.commons.log.webconsole" remote="origin"/>
@@ -97,6 +100,7 @@
   <project name="sling-org-apache-sling-feature-modelconverter" path="org.apache.sling.feature.modelconverter" remote="origin"/>
   <project name="sling-org-apache-sling-feature-resolver" path="org.apache.sling.feature.resolver" remote="origin"/>
   <project name="sling-org-apache-sling-featureflags" path="org.apache.sling.featureflags" remote="origin"/>
+  <project name="sling-org-apache-sling-file-optimization" path="org.apache.sling.fileoptim" remote="origin"/>
   <project name="sling-org-apache-sling-fragment-activation" path="org.apache.sling.fragment.activation" remote="origin"/>
   <project name="sling-org-apache-sling-fragment-nashorn" path="org.apache.sling.fragment.nashorn" remote="origin"/>
   <project name="sling-org-apache-sling-fragment-transaction" path="org.apache.sling.fragment.transaction" remote="origin"/>
@@ -126,6 +130,7 @@
   <project name="sling-org-apache-sling-installer-hc" path="org.apache.sling.installer.hc" remote="origin"/>
   <project name="sling-org-apache-sling-installer-it" path="org.apache.sling.installer.it" remote="origin"/>
   <project name="sling-org-apache-sling-installer-provider-file" path="org.apache.sling.installer.provider.file" remote="origin"/>
+  <project name="sling-org-apache-sling-installer-provider-installhook" path="org.apache.sling.installer.provider.installhook" remote="origin"/>
   <project name="sling-org-apache-sling-installer-provider-jcr" path="org.apache.sling.installer.provider.jcr" remote="origin"/>
   <project name="sling-org-apache-sling-javax-activation" path="org.apache.sling.javax.activation" remote="origin"/>
   <project name="sling-org-apache-sling-jcr-api" path="org.apache.sling.jcr.api" remote="origin"/>
@@ -134,6 +139,7 @@
   <project name="sling-org-apache-sling-jcr-contentloader" path="org.apache.sling.jcr.contentloader" remote="origin"/>
   <project name="sling-org-apache-sling-jcr-contentparser" path="org.apache.sling.jcr.contentparser" remote="origin"/>
   <project name="sling-org-apache-sling-jcr-davex" path="org.apache.sling.jcr.davex" remote="origin"/>
+  <project name="sling-org-apache-sling-jcr-filetransfer" path="org.apache.sling.jcr.filetransfer" remote="origin"/>
   <project name="sling-org-apache-sling-jcr-jackrabbit-accessmanager" path="org.apache.sling.jcr.jackrabbit.accessmanager" remote="origin"/>
   <project name="sling-org-apache-sling-jcr-jackrabbit-base" path="org.apache.sling.jcr.jackrabbit.base" remote="origin"/>
   <project name="sling-org-apache-sling-jcr-jackrabbit-usermanager" path="org.apache.sling.jcr.jackrabbit.usermanager" remote="origin"/>
@@ -196,6 +202,7 @@
   <project name="sling-org-apache-sling-repoinit-parser" path="org.apache.sling.repoinit.parser" remote="origin"/>
   <project name="sling-org-apache-sling-reqanalyzer" path="org.apache.sling.reqanalyzer" remote="origin"/>
   <project name="sling-org-apache-sling-resource-editor" path="org.apache.sling.resource-editor" remote="origin"/>
+  <project name="sling-org-apache-sling-resource-filter" path="org.apache.sling.resource.filter" remote="origin"/>
   <project name="sling-org-apache-sling-resource-inventory" path="org.apache.sling.resource.inventory" remote="origin"/>
   <project name="sling-org-apache-sling-resource-presence" path="org.apache.sling.resource.presence" remote="origin"/>
   <project name="sling-org-apache-sling-resourceaccesssecurity" path="org.apache.sling.resourceaccesssecurity" remote="origin"/>
@@ -253,12 +260,12 @@
   <project name="sling-org-apache-sling-testing-hamcrest" path="org.apache.sling.testing.hamcrest" remote="origin"/>
   <project name="sling-org-apache-sling-testing-jcr-mock" path="org.apache.sling.testing.jcr-mock" remote="origin"/>
   <project name="sling-org-apache-sling-testing-logging-mock" path="org.apache.sling.testing.logging-mock" remote="origin"/>
-  <project name="sling-org-apache-sling-testing-osgi-mock" path="org.apache.sling.testing.osgi-mock" remote="origin"/>
+  <project name="sling-org-apache-sling-testing-osgi-mock" path="org.apache.sling.testing.osgi-mock.reactor" remote="origin"/>
   <project name="sling-org-apache-sling-testing-paxexam" path="org.apache.sling.testing.paxexam" remote="origin"/>
   <project name="sling-org-apache-sling-testing-resourceresolver-mock" path="org.apache.sling.testing.resourceresolver-mock" remote="origin"/>
   <project name="sling-org-apache-sling-testing-rules" path="org.apache.sling.testing.rules" remote="origin"/>
   <project name="sling-org-apache-sling-testing-serversetup" path="org.apache.sling.testing.serversetup" remote="origin"/>
-  <project name="sling-org-apache-sling-testing-sling-mock" path="org.apache.sling.testing.sling-mock" remote="origin"/>
+  <project name="sling-org-apache-sling-testing-sling-mock" path="org.apache.sling.testing.sling-mock.reactor" remote="origin"/>
   <project name="sling-org-apache-sling-testing-sling-mock-oak" path="org.apache.sling.testing.sling-mock-oak" remote="origin"/>
   <project name="sling-org-apache-sling-tooling-support-install" path="org.apache.sling.tooling.support.install" remote="origin"/>
   <project name="sling-org-apache-sling-tooling-support-source" path="org.apache.sling.tooling.support.source" remote="origin"/>
@@ -273,7 +280,7 @@
   <project name="sling-samples" path="sling-samples-builder" remote="origin"/>
   <project name="sling-servlet-archetype" path="sling-servlet-archetype" remote="origin"/>
   <project name="sling-site" path="sling-site" remote="origin"/>
-  <project name="sling-slingfeature-maven-plugin" path="osgifeature-maven-plugin" remote="origin"/>
+  <project name="sling-slingfeature-maven-plugin" path="slingfeature-maven-plugin" remote="origin"/>
   <project name="sling-slingstart-archetype" path="sling-slingstart-archetype" remote="origin"/>
   <project name="sling-slingstart-maven-plugin" path="slingstart-maven-plugin" remote="origin"/>
   <project name="sling-taglib-archetype" path="sling-taglib-archetype" remote="origin"/>
