@@ -4,7 +4,7 @@
   <parent>
     <groupId>org.apache.sling</groupId>
     <artifactId>sling</artifactId>
-    <version>33</version>
+    <version>34</version>
     <relativePath/>
   </parent>
   <artifactId>apache-sling-aggregator</artifactId>
@@ -36,6 +36,8 @@
     <module>org.apache.sling.caconfig.spi</module>
     <module>org.apache.sling.capabilities</module>
     <module>org.apache.sling.cassandra</module>
+    <module>org.apache.sling.clam</module>
+    <module>org.apache.sling.cms</module>
     <module>org.apache.sling.commons.cache.api</module>
     <module>org.apache.sling.commons.cache.container-test</module>
     <module>org.apache.sling.commons.cache.ehcache</module>
@@ -47,6 +49,7 @@
     <module>org.apache.sling.commons.contentdetection</module>
     <module>org.apache.sling.commons.fsclassloader</module>
     <module>org.apache.sling.commons.html</module>
+    <module>org.apache.sling.commons.jcr.file</module>
     <module>org.apache.sling.commons.johnzon</module>
     <module>org.apache.sling.commons.log</module>
     <module>org.apache.sling.commons.log.webconsole</module>
@@ -97,6 +100,7 @@
     <module>org.apache.sling.feature.modelconverter</module>
     <module>org.apache.sling.feature.resolver</module>
     <module>org.apache.sling.featureflags</module>
+    <module>org.apache.sling.fileoptim</module>
     <module>org.apache.sling.fragment.activation</module>
     <module>org.apache.sling.fragment.nashorn</module>
     <module>org.apache.sling.fragment.transaction</module>
@@ -126,6 +130,7 @@
     <module>org.apache.sling.installer.hc</module>
     <module>org.apache.sling.installer.it</module>
     <module>org.apache.sling.installer.provider.file</module>
+    <module>org.apache.sling.installer.provider.installhook</module>
     <module>org.apache.sling.installer.provider.jcr</module>
     <module>org.apache.sling.javax.activation</module>
     <module>org.apache.sling.jcr.api</module>
@@ -134,6 +139,7 @@
     <module>org.apache.sling.jcr.contentloader</module>
     <module>org.apache.sling.jcr.contentparser</module>
     <module>org.apache.sling.jcr.davex</module>
+    <module>org.apache.sling.jcr.filetransfer</module>
     <module>org.apache.sling.jcr.jackrabbit.accessmanager</module>
     <module>org.apache.sling.jcr.jackrabbit.base</module>
     <module>org.apache.sling.jcr.jackrabbit.usermanager</module>
@@ -195,6 +201,7 @@
     <module>org.apache.sling.repoinit.parser</module>
     <module>org.apache.sling.reqanalyzer</module>
     <module>org.apache.sling.resource-editor</module>
+    <module>org.apache.sling.resource.filter</module>
     <module>org.apache.sling.resource.inventory</module>
     <module>org.apache.sling.resource.presence</module>
     <module>org.apache.sling.resourceaccesssecurity</module>
@@ -251,13 +258,13 @@
     <module>org.apache.sling.testing.hamcrest</module>
     <module>org.apache.sling.testing.jcr-mock</module>
     <module>org.apache.sling.testing.logging-mock</module>
-    <module>org.apache.sling.testing.osgi-mock</module>
+    <module>org.apache.sling.testing.osgi-mock.reactor</module>
     <module>org.apache.sling.testing.paxexam</module>
     <module>org.apache.sling.testing.resourceresolver-mock</module>
     <module>org.apache.sling.testing.rules</module>
     <module>org.apache.sling.testing.serversetup</module>
-    <module>org.apache.sling.testing.sling-mock</module>
     <module>org.apache.sling.testing.sling-mock-oak</module>
+    <module>org.apache.sling.testing.sling-mock.reactor</module>
     <module>org.apache.sling.tooling.support.install</module>
     <module>org.apache.sling.tooling.support.source</module>
     <module>org.apache.sling.tracer</module>
@@ -267,7 +274,6 @@
     <module>org.apache.sling.validation.examples</module>
     <module>org.apache.sling.validation.test-services</module>
     <module>org.apache.sling.xss</module>
-    <module>osgifeature-maven-plugin</module>
     <module>sling</module>
     <module>sling-archetype-parent</module>
     <module>sling-bundle-archetype</module>
@@ -281,6 +287,7 @@
     <module>sling-site</module>
     <module>sling-slingstart-archetype</module>
     <module>sling-taglib-archetype</module>
+    <module>slingfeature-maven-plugin</module>
   </modules>
   <build>
     <plugins>
