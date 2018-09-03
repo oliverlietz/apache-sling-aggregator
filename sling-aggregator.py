@@ -149,7 +149,7 @@ def build_pom_parent():
     artifactId.text = 'sling'
     parent.append(artifactId)
     version = xml.etree.ElementTree.Element('version')
-    version.text = '33'
+    version.text = '34'
     parent.append(version)
     relativePath = xml.etree.ElementTree.Element('relativePath')
     parent.append(relativePath)
