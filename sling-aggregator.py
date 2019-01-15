@@ -52,11 +52,16 @@ def filter_sling_repos(opml):
 def read_project(pom):
     project = {}
     project['artifactId'] = pom.findall('./{http://maven.apache.org/POM/4.0.0}artifactId')[0].text.strip()
-    project['name'] = pom.findall('./{http://maven.apache.org/POM/4.0.0}name')[0].text.strip()
+    try:
+        project['name'] = pom.findall('./{http://maven.apache.org/POM/4.0.0}name')[0].text.strip()
+    except:
+        project['name'] = None
+        print(project['artifactId'] + " has no name")
     try:
         project['description'] = pom.findall('./{http://maven.apache.org/POM/4.0.0}description')[0].text.strip()
     except:
         project['description'] = None
+        print(project['artifactId'] + " has no description")
     return project
 
 
