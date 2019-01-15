@@ -19,7 +19,7 @@
   <project name="sling-launchpad-webapp-archetype" path="sling-launchpad-webapp-archetype" remote="origin"/>
   <project name="sling-maven-jcrocm-plugin" path="maven-jcrocm-plugin" remote="origin"/>
   <project name="sling-maven-launchpad-plugin" path="maven-launchpad-plugin" remote="origin"/>
-  <project name="sling-maven-sling-plugin" path="maven-sling-plugin" remote="origin"/>
+  <project name="sling-maven-sling-plugin" path="sling-maven-plugin.reactor" remote="origin"/>
   <project name="sling-org-apache-sling-adapter" path="org.apache.sling.adapter" remote="origin"/>
   <project name="sling-org-apache-sling-api" path="org.apache.sling.api" remote="origin"/>
   <project name="sling-org-apache-sling-app-cms" path="org.apache.sling.cms" remote="origin"/>
@@ -36,6 +36,7 @@
   <project name="sling-org-apache-sling-caconfig-integration-tests" path="org.apache.sling.caconfig.integration-tests" remote="origin"/>
   <project name="sling-org-apache-sling-caconfig-spi" path="org.apache.sling.caconfig.spi" remote="origin"/>
   <project name="sling-org-apache-sling-capabilities" path="org.apache.sling.capabilities" remote="origin"/>
+  <project name="sling-org-apache-sling-capabilities-jcr" path="org.apache.sling.capabilities.jcr" remote="origin"/>
   <project name="sling-org-apache-sling-cassandra" path="org.apache.sling.cassandra" remote="origin"/>
   <project name="sling-org-apache-sling-clam" path="org.apache.sling.clam" remote="origin"/>
   <project name="sling-org-apache-sling-commons-cache-api" path="org.apache.sling.commons.cache.api" remote="origin"/>
@@ -93,7 +94,11 @@
   <project name="sling-org-apache-sling-extensions-webconsolesecurityprovider" path="org.apache.sling.extensions.webconsolesecurityprovider" remote="origin"/>
   <project name="sling-org-apache-sling-feature" path="org.apache.sling.feature" remote="origin"/>
   <project name="sling-org-apache-sling-feature-analyser" path="org.apache.sling.feature.analyser" remote="origin"/>
+  <project name="sling-org-apache-sling-feature-apiregions" path="org.apache.sling.feature.apiregions" remote="origin"/>
   <project name="sling-org-apache-sling-feature-applicationbuilder" path="org.apache.sling.feature.applicationbuilder" remote="origin"/>
+  <project name="sling-org-apache-sling-feature-extension-apiregions" path="org.apache.sling.feature.extension.apiregions" remote="origin"/>
+  <project name="sling-org-apache-sling-feature-extension-content" path="org.apache.sling.feature.extension.content" remote="origin"/>
+  <project name="sling-org-apache-sling-feature-inventoryprinter" path="org.apache.sling.feature.inventoryprinter" remote="origin"/>
   <project name="sling-org-apache-sling-feature-io" path="org.apache.sling.feature.io" remote="origin"/>
   <project name="sling-org-apache-sling-feature-karaf" path="org.apache.sling.feature.karaf" remote="origin"/>
   <project name="sling-org-apache-sling-feature-launcher" path="org.apache.sling.feature.launcher" remote="origin"/>
@@ -146,6 +151,7 @@
   <project name="sling-org-apache-sling-jcr-jcr-wrapper" path="org.apache.sling.jcr.jcr-wrapper" remote="origin"/>
   <project name="sling-org-apache-sling-jcr-js-nodetypes" path="org.apache.sling.jcr.js.nodetypes" remote="origin"/>
   <project name="sling-org-apache-sling-jcr-oak-server" path="org.apache.sling.jcr.oak.server" remote="origin"/>
+  <project name="sling-org-apache-sling-jcr-packageinit" path="org.apache.sling.jcr.packageinit" remote="origin"/>
   <project name="sling-org-apache-sling-jcr-registration" path="org.apache.sling.jcr.registration" remote="origin"/>
   <project name="sling-org-apache-sling-jcr-repoinit" path="org.apache.sling.jcr.repoinit" remote="origin"/>
   <project name="sling-org-apache-sling-jcr-repository-it-resource-versioning" path="org.apache.sling.jcr.repository.it-resource-versioning" remote="origin"/>
@@ -174,6 +180,7 @@
   <project name="sling-org-apache-sling-launchpad-contrib-testing" path="org.apache.sling.launchpad.contrib-testing" remote="origin"/>
   <project name="sling-org-apache-sling-launchpad-installer" path="org.apache.sling.launchpad.installer" remote="origin"/>
   <project name="sling-org-apache-sling-launchpad-integration-tests" path="org.apache.sling.launchpad.integration-tests" remote="origin"/>
+  <project name="sling-org-apache-sling-launchpad-startupmanager" path="org.apache.sling.launchpad.startupmanager" remote="origin"/>
   <project name="sling-org-apache-sling-launchpad-test-bundles" path="org.apache.sling.launchpad.test-bundles" remote="origin"/>
   <project name="sling-org-apache-sling-launchpad-test-fragment" path="org.apache.sling.launchpad.test-fragment" remote="origin"/>
   <project name="sling-org-apache-sling-launchpad-test-services" path="org.apache.sling.launchpad.test-services" remote="origin"/>
@@ -181,6 +188,7 @@
   <project name="sling-org-apache-sling-launchpad-testing" path="org.apache.sling.launchpad.testing" remote="origin"/>
   <project name="sling-org-apache-sling-launchpad-testing-war" path="org.apache.sling.launchpad.testing-war" remote="origin"/>
   <project name="sling-org-apache-sling-models-api" path="org.apache.sling.models.api" remote="origin"/>
+  <project name="sling-org-apache-sling-models-caconfig" path="org.apache.sling.models.caconfig" remote="origin"/>
   <project name="sling-org-apache-sling-models-impl" path="org.apache.sling.models.impl" remote="origin"/>
   <project name="sling-org-apache-sling-models-integration-tests" path="org.apache.sling.models.integration-tests" remote="origin"/>
   <project name="sling-org-apache-sling-models-jacksonexporter" path="org.apache.sling.models.jacksonexporter" remote="origin"/>
@@ -213,6 +221,8 @@
   <project name="sling-org-apache-sling-resourceresolver" path="org.apache.sling.resourceresolver" remote="origin"/>
   <project name="sling-org-apache-sling-rewriter" path="org.apache.sling.rewriter" remote="origin"/>
   <project name="sling-org-apache-sling-scripting-api" path="org.apache.sling.scripting.api" remote="origin"/>
+  <project name="sling-org-apache-sling-scripting-bundle-tracker" path="org.apache.sling.scripting.bundle.tracker" remote="origin"/>
+  <project name="sling-org-apache-sling-scripting-bundle-tracker-it" path="org.apache.sling.scripting.bundle.tracker.it.reactor" remote="origin"/>
   <project name="sling-org-apache-sling-scripting-console" path="org.apache.sling.scripting.console" remote="origin"/>
   <project name="sling-org-apache-sling-scripting-core" path="org.apache.sling.scripting.core" remote="origin"/>
   <project name="sling-org-apache-sling-scripting-el-api" path="org.apache.sling.scripting.el-api" remote="origin"/>
@@ -231,6 +241,7 @@
   <project name="sling-org-apache-sling-scripting-sightly-js-provider" path="org.apache.sling.scripting.sightly.js.provider" remote="origin"/>
   <project name="sling-org-apache-sling-scripting-sightly-models-provider" path="org.apache.sling.scripting.sightly.models.provider" remote="origin"/>
   <project name="sling-org-apache-sling-scripting-sightly-repl" path="org.apache.sling.scripting.sightly.repl" remote="origin"/>
+  <project name="sling-org-apache-sling-scripting-sightly-runtime" path="org.apache.sling.scripting.sightly.runtime" remote="origin"/>
   <project name="sling-org-apache-sling-scripting-sightly-testing" path="org.apache.sling.scripting.sightly.testing" remote="origin"/>
   <project name="sling-org-apache-sling-scripting-sightly-testing-content" path="org.apache.sling.scripting.sightly.testing-content" remote="origin"/>
   <project name="sling-org-apache-sling-scripting-thymeleaf" path="org.apache.sling.scripting.thymeleaf" remote="origin"/>
@@ -276,8 +287,9 @@
   <project name="sling-org-apache-sling-validation-examples" path="org.apache.sling.validation.examples" remote="origin"/>
   <project name="sling-org-apache-sling-validation-test-services" path="org.apache.sling.validation.test-services" remote="origin"/>
   <project name="sling-org-apache-sling-xss" path="org.apache.sling.xss" remote="origin"/>
-  <project name="sling-parent" path="sling" remote="origin"/>
+  <project name="sling-parent" path="sling-parent-reactor" remote="origin"/>
   <project name="sling-samples" path="sling-samples-builder" remote="origin"/>
+  <project name="sling-scriptingbundle-maven-plugin" path="scriptingbundle-maven-plugin" remote="origin"/>
   <project name="sling-servlet-archetype" path="sling-servlet-archetype" remote="origin"/>
   <project name="sling-site" path="sling-site" remote="origin"/>
   <project name="sling-slingfeature-maven-plugin" path="slingfeature-maven-plugin" remote="origin"/>
