@@ -19,7 +19,7 @@
   <project name="sling-launchpad-webapp-archetype" path="sling-launchpad-webapp-archetype" remote="origin"/>
   <project name="sling-maven-jcrocm-plugin" path="maven-jcrocm-plugin" remote="origin"/>
   <project name="sling-maven-launchpad-plugin" path="maven-launchpad-plugin" remote="origin"/>
-  <project name="sling-maven-sling-plugin" path="sling-maven-plugin.reactor" remote="origin"/>
+  <project name="sling-maven-plugin" path="sling-maven-plugin.reactor" remote="origin"/>
   <project name="sling-org-apache-sling-adapter" path="org.apache.sling.adapter" remote="origin"/>
   <project name="sling-org-apache-sling-api" path="org.apache.sling.api" remote="origin"/>
   <project name="sling-org-apache-sling-app-cms" path="org.apache.sling.cms" remote="origin"/>
