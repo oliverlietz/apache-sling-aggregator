@@ -19,7 +19,6 @@
     <module>launchpad-comparator</module>
     <module>maven-jcrocm-plugin</module>
     <module>maven-launchpad-plugin</module>
-    <module>maven-sling-plugin</module>
     <module>org.apache.sling.adapter</module>
     <module>org.apache.sling.api</module>
     <module>org.apache.sling.auth.core</module>
@@ -35,6 +34,7 @@
     <module>org.apache.sling.caconfig.integration-tests</module>
     <module>org.apache.sling.caconfig.spi</module>
     <module>org.apache.sling.capabilities</module>
+    <module>org.apache.sling.capabilities.jcr</module>
     <module>org.apache.sling.cassandra</module>
     <module>org.apache.sling.clam</module>
     <module>org.apache.sling.cms</module>
@@ -93,7 +93,11 @@
     <module>org.apache.sling.extensions.webconsolesecurityprovider</module>
     <module>org.apache.sling.feature</module>
     <module>org.apache.sling.feature.analyser</module>
+    <module>org.apache.sling.feature.apiregions</module>
     <module>org.apache.sling.feature.applicationbuilder</module>
+    <module>org.apache.sling.feature.extension.apiregions</module>
+    <module>org.apache.sling.feature.extension.content</module>
+    <module>org.apache.sling.feature.inventoryprinter</module>
     <module>org.apache.sling.feature.io</module>
     <module>org.apache.sling.feature.karaf</module>
     <module>org.apache.sling.feature.launcher</module>
@@ -146,6 +150,7 @@
     <module>org.apache.sling.jcr.jcr-wrapper</module>
     <module>org.apache.sling.jcr.js.nodetypes</module>
     <module>org.apache.sling.jcr.oak.server</module>
+    <module>org.apache.sling.jcr.packageinit</module>
     <module>org.apache.sling.jcr.registration</module>
     <module>org.apache.sling.jcr.repoinit</module>
     <module>org.apache.sling.jcr.repository.it-resource-versioning</module>
@@ -173,6 +178,7 @@
     <module>org.apache.sling.launchpad.base</module>
     <module>org.apache.sling.launchpad.installer</module>
     <module>org.apache.sling.launchpad.integration-tests</module>
+    <module>org.apache.sling.launchpad.startupmanager</module>
     <module>org.apache.sling.launchpad.test-bundles</module>
     <module>org.apache.sling.launchpad.test-fragment</module>
     <module>org.apache.sling.launchpad.test-services</module>
@@ -180,6 +186,7 @@
     <module>org.apache.sling.launchpad.testing</module>
     <module>org.apache.sling.launchpad.testing-war</module>
     <module>org.apache.sling.models.api</module>
+    <module>org.apache.sling.models.caconfig</module>
     <module>org.apache.sling.models.impl</module>
     <module>org.apache.sling.models.integration-tests</module>
     <module>org.apache.sling.models.jacksonexporter</module>
@@ -212,6 +219,8 @@
     <module>org.apache.sling.resourceresolver</module>
     <module>org.apache.sling.rewriter</module>
     <module>org.apache.sling.scripting.api</module>
+    <module>org.apache.sling.scripting.bundle.tracker</module>
+    <module>org.apache.sling.scripting.bundle.tracker.it.reactor</module>
     <module>org.apache.sling.scripting.console</module>
     <module>org.apache.sling.scripting.core</module>
     <module>org.apache.sling.scripting.el-api</module>
@@ -230,6 +239,7 @@
     <module>org.apache.sling.scripting.sightly.js.provider</module>
     <module>org.apache.sling.scripting.sightly.models.provider</module>
     <module>org.apache.sling.scripting.sightly.repl</module>
+    <module>org.apache.sling.scripting.sightly.runtime</module>
     <module>org.apache.sling.scripting.sightly.testing</module>
     <module>org.apache.sling.scripting.sightly.testing-content</module>
     <module>org.apache.sling.scripting.thymeleaf</module>
@@ -274,7 +284,7 @@
     <module>org.apache.sling.validation.examples</module>
     <module>org.apache.sling.validation.test-services</module>
     <module>org.apache.sling.xss</module>
-    <module>sling</module>
+    <module>scriptingbundle-maven-plugin</module>
     <module>sling-archetype-parent</module>
     <module>sling-bundle-archetype</module>
     <module>sling-initial-content-archetype</module>
@@ -282,6 +292,8 @@
     <module>sling-launchpad-debian</module>
     <module>sling-launchpad-standalone-archetype</module>
     <module>sling-launchpad-webapp-archetype</module>
+    <module>sling-maven-plugin.reactor</module>
+    <module>sling-parent-reactor</module>
     <module>sling-samples-builder</module>
     <module>sling-servlet-archetype</module>
     <module>sling-site</module>
