@@ -4,7 +4,7 @@
   <parent>
     <groupId>org.apache.sling</groupId>
     <artifactId>sling</artifactId>
-    <version>34</version>
+    <version>39</version>
     <relativePath/>
   </parent>
   <artifactId>apache-sling-aggregator</artifactId>
@@ -12,7 +12,6 @@
   <packaging>pom</packaging>
   <name>Apache Sling – Aggregator</name>
   <modules>
-    <module>adapter-annotations</module>
     <module>apache-sling-jar-resource-bundle</module>
     <module>htl-maven-plugin</module>
     <module>jspc-maven-plugin</module>
@@ -27,6 +26,8 @@
     <module>org.apache.sling.auth.xing.login</module>
     <module>org.apache.sling.auth.xing.oauth</module>
     <module>org.apache.sling.bnd.models</module>
+    <module>org.apache.sling.bnd.plugin.headers.parameters.remove</module>
+    <module>org.apache.sling.bnd.plugins</module>
     <module>org.apache.sling.bundleresource.impl</module>
     <module>org.apache.sling.caconfig.api</module>
     <module>org.apache.sling.caconfig.bnd-plugin</module>
@@ -47,6 +48,7 @@
     <module>org.apache.sling.commons.classloader</module>
     <module>org.apache.sling.commons.compiler</module>
     <module>org.apache.sling.commons.contentdetection</module>
+    <module>org.apache.sling.commons.crypto</module>
     <module>org.apache.sling.commons.fsclassloader</module>
     <module>org.apache.sling.commons.html</module>
     <module>org.apache.sling.commons.jcr.file</module>
@@ -64,9 +66,12 @@
     <module>org.apache.sling.commons.testing</module>
     <module>org.apache.sling.commons.threaddump</module>
     <module>org.apache.sling.commons.threads</module>
-    <module>org.apache.sling.crankstart.launcher</module>
-    <module>org.apache.sling.crankstart.test.model</module>
-    <module>org.apache.sling.crankstart.test.services</module>
+    <module>org.apache.sling.connection-timeout-agent</module>
+    <module>org.apache.sling.contentparser.api</module>
+    <module>org.apache.sling.contentparser.json</module>
+    <module>org.apache.sling.contentparser.testutils</module>
+    <module>org.apache.sling.contentparser.xml</module>
+    <module>org.apache.sling.contentparser.xml-jcr</module>
     <module>org.apache.sling.datasource</module>
     <module>org.apache.sling.discovery.api</module>
     <module>org.apache.sling.discovery.base</module>
@@ -79,6 +84,10 @@
     <module>org.apache.sling.distribution.avro-serializer</module>
     <module>org.apache.sling.distribution.core</module>
     <module>org.apache.sling.distribution.it</module>
+    <module>org.apache.sling.distribution.journal</module>
+    <module>org.apache.sling.distribution.journal.it</module>
+    <module>org.apache.sling.distribution.journal.kafka</module>
+    <module>org.apache.sling.distribution.journal.messages</module>
     <module>org.apache.sling.distribution.kryo-serializer</module>
     <module>org.apache.sling.distribution.sample</module>
     <module>org.apache.sling.dynamic-include</module>
@@ -94,14 +103,17 @@
     <module>org.apache.sling.feature</module>
     <module>org.apache.sling.feature.analyser</module>
     <module>org.apache.sling.feature.apiregions</module>
+    <module>org.apache.sling.feature.apiregions.model</module>
     <module>org.apache.sling.feature.applicationbuilder</module>
+    <module>org.apache.sling.feature.cpconverter</module>
+    <module>org.apache.sling.feature.diff</module>
     <module>org.apache.sling.feature.extension.apiregions</module>
     <module>org.apache.sling.feature.extension.content</module>
     <module>org.apache.sling.feature.inventoryprinter</module>
-    <module>org.apache.sling.feature.io</module>
     <module>org.apache.sling.feature.karaf</module>
     <module>org.apache.sling.feature.launcher</module>
     <module>org.apache.sling.feature.modelconverter</module>
+    <module>org.apache.sling.feature.r2f</module>
     <module>org.apache.sling.feature.resolver</module>
     <module>org.apache.sling.featureflags</module>
     <module>org.apache.sling.fileoptim</module>
@@ -111,25 +123,23 @@
     <module>org.apache.sling.fragment.ws</module>
     <module>org.apache.sling.fragment.xml</module>
     <module>org.apache.sling.fsresource</module>
+    <module>org.apache.sling.graphql.core</module>
     <module>org.apache.sling.hapi</module>
     <module>org.apache.sling.hapi.client</module>
     <module>org.apache.sling.hapi.samplecontent</module>
-    <module>org.apache.sling.hc.annotations</module>
     <module>org.apache.sling.hc.api</module>
-    <module>org.apache.sling.hc.core</module>
     <module>org.apache.sling.hc.it</module>
     <module>org.apache.sling.hc.junit.bridge</module>
     <module>org.apache.sling.hc.samples</module>
     <module>org.apache.sling.hc.support</module>
-    <module>org.apache.sling.hc.webconsole</module>
     <module>org.apache.sling.i18n</module>
     <module>org.apache.sling.installer.console</module>
     <module>org.apache.sling.installer.core</module>
     <module>org.apache.sling.installer.factory.configuration</module>
     <module>org.apache.sling.installer.factory.deploymentpackage</module>
+    <module>org.apache.sling.installer.factory.feature</module>
     <module>org.apache.sling.installer.factory.model</module>
     <module>org.apache.sling.installer.factory.packages</module>
-    <module>org.apache.sling.installer.factory.subsystems</module>
     <module>org.apache.sling.installer.factory.subsystems-base</module>
     <module>org.apache.sling.installer.hc</module>
     <module>org.apache.sling.installer.it</module>
@@ -151,6 +161,7 @@
     <module>org.apache.sling.jcr.js.nodetypes</module>
     <module>org.apache.sling.jcr.oak.server</module>
     <module>org.apache.sling.jcr.packageinit</module>
+    <module>org.apache.sling.jcr.presence</module>
     <module>org.apache.sling.jcr.registration</module>
     <module>org.apache.sling.jcr.repoinit</module>
     <module>org.apache.sling.jcr.repository.it-resource-versioning</module>
@@ -174,6 +185,7 @@
     <module>org.apache.sling.karaf-features</module>
     <module>org.apache.sling.karaf-integration-tests</module>
     <module>org.apache.sling.karaf-launchpad-oak-tar-integration-tests</module>
+    <module>org.apache.sling.kickstart</module>
     <module>org.apache.sling.launchpad.api</module>
     <module>org.apache.sling.launchpad.base</module>
     <module>org.apache.sling.launchpad.installer</module>
@@ -182,7 +194,6 @@
     <module>org.apache.sling.launchpad.test-bundles</module>
     <module>org.apache.sling.launchpad.test-fragment</module>
     <module>org.apache.sling.launchpad.test-services</module>
-    <module>org.apache.sling.launchpad.test-services-war</module>
     <module>org.apache.sling.launchpad.testing</module>
     <module>org.apache.sling.launchpad.testing-war</module>
     <module>org.apache.sling.models.api</module>
@@ -233,6 +244,7 @@
     <module>org.apache.sling.scripting.jsp-api</module>
     <module>org.apache.sling.scripting.jsp.jstl</module>
     <module>org.apache.sling.scripting.jsp.taglib</module>
+    <module>org.apache.sling.scripting.jsp.taglib.compat</module>
     <module>org.apache.sling.scripting.sightly</module>
     <module>org.apache.sling.scripting.sightly.compiler</module>
     <module>org.apache.sling.scripting.sightly.compiler.java</module>
@@ -256,9 +268,6 @@
     <module>org.apache.sling.settings</module>
     <module>org.apache.sling.starter</module>
     <module>org.apache.sling.starter.content</module>
-    <module>org.apache.sling.starter.startup</module>
-    <module>org.apache.sling.startupfilter</module>
-    <module>org.apache.sling.startupfilter.disabler</module>
     <module>org.apache.sling.superimposing</module>
     <module>org.apache.sling.tail</module>
     <module>org.apache.sling.tenant</module>
@@ -287,18 +296,24 @@
     <module>scriptingbundle-maven-plugin</module>
     <module>sling-archetype-parent</module>
     <module>sling-bundle-archetype</module>
+    <module>sling-cli</module>
+    <module>sling-content-package-archetype</module>
+    <module>sling-feature-converter-maven-plugin</module>
     <module>sling-initial-content-archetype</module>
     <module>sling-jcrinstall-bundle-archetype</module>
+    <module>sling-kickstart-maven-plugin</module>
     <module>sling-launchpad-debian</module>
     <module>sling-launchpad-standalone-archetype</module>
     <module>sling-launchpad-webapp-archetype</module>
     <module>sling-maven-plugin.reactor</module>
     <module>sling-parent-reactor</module>
+    <module>sling-project-archetype</module>
     <module>sling-samples-builder</module>
     <module>sling-servlet-archetype</module>
     <module>sling-site</module>
     <module>sling-slingstart-archetype</module>
     <module>sling-taglib-archetype</module>
+    <module>sling-whiteboard-builder</module>
     <module>slingfeature-maven-plugin</module>
   </modules>
   <build>
