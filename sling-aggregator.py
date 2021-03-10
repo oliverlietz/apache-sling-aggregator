@@ -81,15 +81,15 @@ def build_repo_manifest(mapping):
     manifest.append(build_repo_remote('origin', 'https://gitbox.apache.org/repos/asf/', 'master'))
     manifest.append(build_repo_remote('oliverlietz', 'https://github.com/oliverlietz/', 'master'))
     project = xml.etree.ElementTree.Element('project')
-    project.set('path', '.')
     project.set('name', 'apache-sling-aggregator')
+    project.set('path', '.')
     project.set('remote', 'oliverlietz')
     manifest.append(project)
     for repo in sorted(mapping):
         path = repo if mapping[repo] is None else mapping[repo]['artifactId']
         project = xml.etree.ElementTree.Element('project')
-        project.set('path', path)
         project.set('name', repo)
+        project.set('path', path)
         project.set('remote', 'origin')
         manifest.append(project)
 
@@ -98,8 +98,8 @@ def build_repo_manifest(mapping):
 
 def build_repo_remote(name, fetch, revision):
     remote = xml.etree.ElementTree.Element('remote')
-    remote.set('name', name)
     remote.set('fetch', fetch)
+    remote.set('name', name)
     remote.set('revision', revision)
     return remote
 
