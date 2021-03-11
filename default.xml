@@ -3,13 +3,14 @@
   <remote fetch="https://gitbox.apache.org/repos/asf/" name="origin" revision="master"/>
   <remote fetch="https://github.com/oliverlietz/" name="oliverlietz" revision="master"/>
   <project name="apache-sling-aggregator" path="." remote="oliverlietz"/>
-  <project name="sling-adapter-annotations" path="sling-adapter-annotations" remote="origin"/>
+  <project name="sling-adapter-annotations" path="adapter-annotations" remote="origin"/>
   <project name="sling-aggregator" path="sling-aggregator" remote="origin"/>
   <project name="sling-apache-sling-jar-resource-bundle" path="apache-sling-jar-resource-bundle" remote="origin"/>
   <project name="sling-archetype-parent" path="sling-archetype-parent" remote="origin"/>
   <project name="sling-bundle-archetype" path="sling-bundle-archetype" remote="origin"/>
   <project name="sling-content-package-archetype" path="sling-content-package-archetype" remote="origin"/>
   <project name="sling-feature-converter-maven-plugin" path="sling-feature-converter-maven-plugin" remote="origin"/>
+  <project name="sling-feature-launcher-maven-plugin" path="feature-launcher-maven-plugin" remote="origin"/>
   <project name="sling-htl-maven-plugin" path="htl-maven-plugin" remote="origin"/>
   <project name="sling-ide-tooling" path="sling-ide-tooling" remote="origin"/>
   <project name="sling-initial-content-archetype" path="sling-initial-content-archetype" remote="origin"/>
@@ -20,10 +21,11 @@
   <project name="sling-launchpad-debian" path="sling-launchpad-debian" remote="origin"/>
   <project name="sling-launchpad-standalone-archetype" path="sling-launchpad-standalone-archetype" remote="origin"/>
   <project name="sling-launchpad-webapp-archetype" path="sling-launchpad-webapp-archetype" remote="origin"/>
-  <project name="sling-maven-jcrocm-plugin" path="maven-jcrocm-plugin" remote="origin"/>
   <project name="sling-maven-launchpad-plugin" path="maven-launchpad-plugin" remote="origin"/>
   <project name="sling-maven-plugin" path="sling-maven-plugin.reactor" remote="origin"/>
   <project name="sling-org-apache-sling-adapter" path="org.apache.sling.adapter" remote="origin"/>
+  <project name="sling-org-apache-sling-adapter-annotations" path="org.apache.sling.adapter.annotations" remote="origin"/>
+  <project name="sling-org-apache-sling-adapter-annotations-it" path="sling-org-apache-sling-adapter-annotations-it" remote="origin"/>
   <project name="sling-org-apache-sling-api" path="org.apache.sling.api" remote="origin"/>
   <project name="sling-org-apache-sling-app-cms" path="org.apache.sling.cms" remote="origin"/>
   <project name="sling-org-apache-sling-auth-core" path="org.apache.sling.auth.core" remote="origin"/>
@@ -53,6 +55,8 @@
   <project name="sling-org-apache-sling-commons-clam" path="org.apache.sling.commons.clam" remote="origin"/>
   <project name="sling-org-apache-sling-commons-classloader" path="org.apache.sling.commons.classloader" remote="origin"/>
   <project name="sling-org-apache-sling-commons-compiler" path="org.apache.sling.commons.compiler" remote="origin"/>
+  <project name="sling-org-apache-sling-commons-content-analyzing" path="org.apache.sling.commons.content.analyzing" remote="origin"/>
+  <project name="sling-org-apache-sling-commons-content-processing" path="org.apache.sling.commons.content.processing" remote="origin"/>
   <project name="sling-org-apache-sling-commons-contentdetection" path="org.apache.sling.commons.contentdetection" remote="origin"/>
   <project name="sling-org-apache-sling-commons-crypto" path="org.apache.sling.commons.crypto" remote="origin"/>
   <project name="sling-org-apache-sling-commons-fsclassloader" path="org.apache.sling.commons.fsclassloader" remote="origin"/>
@@ -118,6 +122,7 @@
   <project name="sling-org-apache-sling-feature-diff" path="org.apache.sling.feature.diff" remote="origin"/>
   <project name="sling-org-apache-sling-feature-extension-apiregions" path="org.apache.sling.feature.extension.apiregions" remote="origin"/>
   <project name="sling-org-apache-sling-feature-extension-content" path="org.apache.sling.feature.extension.content" remote="origin"/>
+  <project name="sling-org-apache-sling-feature-extension-unpack" path="org.apache.sling.feature.extension.unpack" remote="origin"/>
   <project name="sling-org-apache-sling-feature-inventoryprinter" path="org.apache.sling.feature.inventoryprinter" remote="origin"/>
   <project name="sling-org-apache-sling-feature-io" path="sling-org-apache-sling-feature-io" remote="origin"/>
   <project name="sling-org-apache-sling-feature-karaf" path="org.apache.sling.feature.karaf" remote="origin"/>
@@ -173,6 +178,7 @@
   <project name="sling-org-apache-sling-jcr-jackrabbit-usermanager" path="org.apache.sling.jcr.jackrabbit.usermanager" remote="origin"/>
   <project name="sling-org-apache-sling-jcr-jcr-wrapper" path="org.apache.sling.jcr.jcr-wrapper" remote="origin"/>
   <project name="sling-org-apache-sling-jcr-js-nodetypes" path="org.apache.sling.jcr.js.nodetypes" remote="origin"/>
+  <project name="sling-org-apache-sling-jcr-maintenance" path="org.apache.sling.jcr.maintenance" remote="origin"/>
   <project name="sling-org-apache-sling-jcr-oak-server" path="org.apache.sling.jcr.oak.server" remote="origin"/>
   <project name="sling-org-apache-sling-jcr-packageinit" path="org.apache.sling.jcr.packageinit" remote="origin"/>
   <project name="sling-org-apache-sling-jcr-presence" path="org.apache.sling.jcr.presence" remote="origin"/>
@@ -206,12 +212,10 @@
   <project name="sling-org-apache-sling-launchpad-installer" path="org.apache.sling.launchpad.installer" remote="origin"/>
   <project name="sling-org-apache-sling-launchpad-integration-tests" path="org.apache.sling.launchpad.integration-tests" remote="origin"/>
   <project name="sling-org-apache-sling-launchpad-startupmanager" path="org.apache.sling.launchpad.startupmanager" remote="origin"/>
-  <project name="sling-org-apache-sling-launchpad-test-bundles" path="org.apache.sling.launchpad.test-bundles" remote="origin"/>
   <project name="sling-org-apache-sling-launchpad-test-fragment" path="org.apache.sling.launchpad.test-fragment" remote="origin"/>
   <project name="sling-org-apache-sling-launchpad-test-services" path="org.apache.sling.launchpad.test-services" remote="origin"/>
   <project name="sling-org-apache-sling-launchpad-test-services-war" path="sling-org-apache-sling-launchpad-test-services-war" remote="origin"/>
   <project name="sling-org-apache-sling-launchpad-testing" path="org.apache.sling.launchpad.testing" remote="origin"/>
-  <project name="sling-org-apache-sling-launchpad-testing-war" path="org.apache.sling.launchpad.testing-war" remote="origin"/>
   <project name="sling-org-apache-sling-models-api" path="org.apache.sling.models.api" remote="origin"/>
   <project name="sling-org-apache-sling-models-caconfig" path="org.apache.sling.models.caconfig" remote="origin"/>
   <project name="sling-org-apache-sling-models-impl" path="org.apache.sling.models.impl" remote="origin"/>
@@ -246,7 +250,6 @@
   <project name="sling-org-apache-sling-resourceresolver" path="org.apache.sling.resourceresolver" remote="origin"/>
   <project name="sling-org-apache-sling-rewriter" path="org.apache.sling.rewriter" remote="origin"/>
   <project name="sling-org-apache-sling-scripting-api" path="org.apache.sling.scripting.api" remote="origin"/>
-  <project name="sling-org-apache-sling-scripting-bundle-tracker" path="org.apache.sling.scripting.bundle.tracker" remote="origin"/>
   <project name="sling-org-apache-sling-scripting-bundle-tracker-it" path="org.apache.sling.scripting.bundle.tracker.it.reactor" remote="origin"/>
   <project name="sling-org-apache-sling-scripting-console" path="org.apache.sling.scripting.console" remote="origin"/>
   <project name="sling-org-apache-sling-scripting-core" path="org.apache.sling.scripting.core" remote="origin"/>
@@ -265,11 +268,11 @@
   <project name="sling-org-apache-sling-scripting-sightly-compiler" path="org.apache.sling.scripting.sightly.compiler" remote="origin"/>
   <project name="sling-org-apache-sling-scripting-sightly-compiler-java" path="org.apache.sling.scripting.sightly.compiler.java" remote="origin"/>
   <project name="sling-org-apache-sling-scripting-sightly-js-provider" path="org.apache.sling.scripting.sightly.js.provider" remote="origin"/>
-  <project name="sling-org-apache-sling-scripting-sightly-models-provider" path="org.apache.sling.scripting.sightly.models.provider" remote="origin"/>
   <project name="sling-org-apache-sling-scripting-sightly-repl" path="org.apache.sling.scripting.sightly.repl" remote="origin"/>
   <project name="sling-org-apache-sling-scripting-sightly-runtime" path="org.apache.sling.scripting.sightly.runtime" remote="origin"/>
   <project name="sling-org-apache-sling-scripting-sightly-testing" path="org.apache.sling.scripting.sightly.testing" remote="origin"/>
   <project name="sling-org-apache-sling-scripting-sightly-testing-content" path="org.apache.sling.scripting.sightly.testing-content" remote="origin"/>
+  <project name="sling-org-apache-sling-scripting-spi" path="org.apache.sling.scripting.spi" remote="origin"/>
   <project name="sling-org-apache-sling-scripting-thymeleaf" path="org.apache.sling.scripting.thymeleaf" remote="origin"/>
   <project name="sling-org-apache-sling-scripting-xproc" path="org.apache.sling.scripting.xproc" remote="origin"/>
   <project name="sling-org-apache-sling-security" path="org.apache.sling.security" remote="origin"/>
@@ -277,7 +280,6 @@
   <project name="sling-org-apache-sling-serviceusermapper" path="org.apache.sling.serviceusermapper" remote="origin"/>
   <project name="sling-org-apache-sling-servlet-helpers" path="org.apache.sling.servlet-helpers" remote="origin"/>
   <project name="sling-org-apache-sling-servlets-annotations" path="org.apache.sling.servlets.annotations" remote="origin"/>
-  <project name="sling-org-apache-sling-servlets-annotations-it" path="org.apache.sling.servlets.annotations.it" remote="origin"/>
   <project name="sling-org-apache-sling-servlets-get" path="org.apache.sling.servlets.get" remote="origin"/>
   <project name="sling-org-apache-sling-servlets-post" path="org.apache.sling.servlets.post" remote="origin"/>
   <project name="sling-org-apache-sling-servlets-resolver" path="org.apache.sling.servlets.resolver" remote="origin"/>
