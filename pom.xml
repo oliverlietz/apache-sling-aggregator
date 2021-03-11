@@ -4,7 +4,7 @@
   <parent>
     <groupId>org.apache.sling</groupId>
     <artifactId>sling</artifactId>
-    <version>39</version>
+    <version>41</version>
     <relativePath/>
   </parent>
   <artifactId>apache-sling-aggregator</artifactId>
@@ -12,13 +12,15 @@
   <packaging>pom</packaging>
   <name>Apache Sling – Aggregator</name>
   <modules>
+    <module>adapter-annotations</module>
     <module>apache-sling-jar-resource-bundle</module>
+    <module>feature-launcher-maven-plugin</module>
     <module>htl-maven-plugin</module>
     <module>jspc-maven-plugin</module>
     <module>launchpad-comparator</module>
-    <module>maven-jcrocm-plugin</module>
     <module>maven-launchpad-plugin</module>
     <module>org.apache.sling.adapter</module>
+    <module>org.apache.sling.adapter.annotations</module>
     <module>org.apache.sling.api</module>
     <module>org.apache.sling.auth.core</module>
     <module>org.apache.sling.auth.form</module>
@@ -47,6 +49,8 @@
     <module>org.apache.sling.commons.clam</module>
     <module>org.apache.sling.commons.classloader</module>
     <module>org.apache.sling.commons.compiler</module>
+    <module>org.apache.sling.commons.content.analyzing</module>
+    <module>org.apache.sling.commons.content.processing</module>
     <module>org.apache.sling.commons.contentdetection</module>
     <module>org.apache.sling.commons.crypto</module>
     <module>org.apache.sling.commons.fsclassloader</module>
@@ -109,6 +113,7 @@
     <module>org.apache.sling.feature.diff</module>
     <module>org.apache.sling.feature.extension.apiregions</module>
     <module>org.apache.sling.feature.extension.content</module>
+    <module>org.apache.sling.feature.extension.unpack</module>
     <module>org.apache.sling.feature.inventoryprinter</module>
     <module>org.apache.sling.feature.karaf</module>
     <module>org.apache.sling.feature.launcher</module>
@@ -159,6 +164,7 @@
     <module>org.apache.sling.jcr.jackrabbit.usermanager</module>
     <module>org.apache.sling.jcr.jcr-wrapper</module>
     <module>org.apache.sling.jcr.js.nodetypes</module>
+    <module>org.apache.sling.jcr.maintenance</module>
     <module>org.apache.sling.jcr.oak.server</module>
     <module>org.apache.sling.jcr.packageinit</module>
     <module>org.apache.sling.jcr.presence</module>
@@ -191,11 +197,9 @@
     <module>org.apache.sling.launchpad.installer</module>
     <module>org.apache.sling.launchpad.integration-tests</module>
     <module>org.apache.sling.launchpad.startupmanager</module>
-    <module>org.apache.sling.launchpad.test-bundles</module>
     <module>org.apache.sling.launchpad.test-fragment</module>
     <module>org.apache.sling.launchpad.test-services</module>
     <module>org.apache.sling.launchpad.testing</module>
-    <module>org.apache.sling.launchpad.testing-war</module>
     <module>org.apache.sling.models.api</module>
     <module>org.apache.sling.models.caconfig</module>
     <module>org.apache.sling.models.impl</module>
@@ -230,7 +234,6 @@
     <module>org.apache.sling.resourceresolver</module>
     <module>org.apache.sling.rewriter</module>
     <module>org.apache.sling.scripting.api</module>
-    <module>org.apache.sling.scripting.bundle.tracker</module>
     <module>org.apache.sling.scripting.bundle.tracker.it.reactor</module>
     <module>org.apache.sling.scripting.console</module>
     <module>org.apache.sling.scripting.core</module>
@@ -249,11 +252,11 @@
     <module>org.apache.sling.scripting.sightly.compiler</module>
     <module>org.apache.sling.scripting.sightly.compiler.java</module>
     <module>org.apache.sling.scripting.sightly.js.provider</module>
-    <module>org.apache.sling.scripting.sightly.models.provider</module>
     <module>org.apache.sling.scripting.sightly.repl</module>
     <module>org.apache.sling.scripting.sightly.runtime</module>
     <module>org.apache.sling.scripting.sightly.testing</module>
     <module>org.apache.sling.scripting.sightly.testing-content</module>
+    <module>org.apache.sling.scripting.spi</module>
     <module>org.apache.sling.scripting.thymeleaf</module>
     <module>org.apache.sling.scripting.xproc</module>
     <module>org.apache.sling.security</module>
@@ -261,7 +264,6 @@
     <module>org.apache.sling.serviceusermapper</module>
     <module>org.apache.sling.servlet-helpers</module>
     <module>org.apache.sling.servlets.annotations</module>
-    <module>org.apache.sling.servlets.annotations.it</module>
     <module>org.apache.sling.servlets.get</module>
     <module>org.apache.sling.servlets.post</module>
     <module>org.apache.sling.servlets.resolver</module>
