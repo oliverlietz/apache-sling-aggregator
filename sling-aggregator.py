@@ -18,7 +18,7 @@ def read_opml():
 
 
 def read_pom(repo):
-    url = 'https://gitbox.apache.org/repos/asf?p=%s.git;a=blob_plain;f=pom.xml;hb=HEAD' % (repo)
+    url = 'https://raw.githubusercontent.com/apache/%s/master/pom.xml' % (repo)
     try:
         response = urllib.request.urlopen(url)
     except:
